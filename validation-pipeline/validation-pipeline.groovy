@@ -1,8 +1,11 @@
-@library('parameters') _
-@library('helper-methods') _
-
 pipeline {
+    libraries {
+        lib('helper-methods')
+        lib('parameters')
+    }
+
     agent any
+    
     stages {
         stage('Prepare Parameters') {
             steps {
