@@ -3,7 +3,7 @@ pipeline {
         lib('helper-methods')
         lib('parameters')
     }
-    
+
     agent any
     
     stages {
@@ -11,6 +11,13 @@ pipeline {
             steps {
                 script{
                     parameters.params()
+                }
+            }
+        }
+        stage('Use Lib') {
+            steps {
+                script {
+                    helper-methods.changeBuildName("MAIN")
                 }
             }
         }
