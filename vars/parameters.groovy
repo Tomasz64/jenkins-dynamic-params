@@ -11,7 +11,7 @@ def params() {
         params += [
             string(
                 defaultValue: '',
-                description: "I'm params for master pipeline!"
+                description: "I'm params for master pipeline!",
                 name: 'DEPLOY_ARGS'
             ),
         ]
@@ -19,7 +19,7 @@ def params() {
         params += [
             string(
                 defaultValue: '',
-                description: "I'm params for validation pipeline!"
+                description: "I'm params for validation pipeline!",
                 name: 'DEPLOY_ARGS'
             ),
         ]
